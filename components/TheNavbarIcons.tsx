@@ -4,6 +4,7 @@ import { useState } from "react"
 interface Icon {
   d: string
   d2?: string
+  d3?: string
   alt: string
   description?: string
 }
@@ -44,16 +45,17 @@ export const TheNavbarIcons = ({
       onClick={() => {
         icon.description === "Наверх" && handleScroll()
       }}
-      className="mt-[28px] text-[#BABABA] hover:text-white flex flex-row items-center first:mt-[115px] last:mt-[282px] cursor-pointer"
+      className="mt-[28px] text-[#BABABA] hover:text-white flex flex-row items-center first:mt-[0px] first:mb-[110px] last:mt-[282px] cursor-pointer"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="44"
-        height="44"
-        viewBox="0 0 44 44"
+        width={icon.alt === "logo" ? "144" : "44"}
+        height={icon.alt === "logo" ? "50" : "44"}
+        viewBox={icon.alt === "logo" ? "0 0 144 50" : "0 0 44 44"}
       >
         <path d={icon.d} fill={fill} />
         <path d={icon?.d2} fill={fill} />
+        <path d={icon?.d3} fill={fill} />
       </svg>
       <span className={styles}>{icon.description}</span>
     </li>

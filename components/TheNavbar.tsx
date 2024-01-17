@@ -1,8 +1,6 @@
 import { TheNavbarIcons } from "../components/TheNavbarIcons"
 import { icons } from "../public/data"
 import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
 
 export const TheNavbar = () => {
   const [styles, setStyles] = useState(
@@ -36,11 +34,6 @@ export const TheNavbar = () => {
       }}
       className="mt-10 ml-16 fixed"
     >
-      <ul>
-        <Link href="/">
-          <Image src="/logo.svg" alt="Logo" width={144} height={50} priority />
-        </Link>
-      </ul>
       <ul className="flex flex-col">
         {icons.map((e, idx) => (
           <TheNavbarIcons key={idx} icon={e} styles={styles} />
