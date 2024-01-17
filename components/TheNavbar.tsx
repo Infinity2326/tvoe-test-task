@@ -1,12 +1,12 @@
 import { TheNavbarIcons } from "../components/TheNavbarIcons"
 import { icons } from "../public/data"
 import { useState } from "react"
+import Link from "next/link"
 
 export const TheNavbar = () => {
   const [styles, setStyles] = useState(
     "text-[#BABABA] ml-4 text-[30px] font-[400] max-h-[44px] hidden"
   )
-
   const handleHover = (action: string) => {
     switch (action) {
       case "navIn": {
@@ -35,9 +35,11 @@ export const TheNavbar = () => {
       className="mt-10 ml-16 fixed"
     >
       <ul className="flex flex-col">
+        {/* <Link href="/"> */}
         {icons.map((e, idx) => (
           <TheNavbarIcons key={idx} icon={e} styles={styles} />
         ))}
+        {/* </Link> */}
       </ul>
     </nav>
   )

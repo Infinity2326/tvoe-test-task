@@ -40,7 +40,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="flex flex-col w-[6730px] h-[668px] ml-[215px]">
+        <section className="flex flex-col h-[668px] ml-[215px] mb-[203px] overflow-x-scroll overflow-y-hidden">
           <div className="flex flex-row items-center mb-6">
             <h2 className="outline-text font-[900] italic text-[52px] pr-5">
               ТОП-10
@@ -49,7 +49,7 @@ export default function Home() {
               просмотров за неделю
             </h2>
           </div>
-          <div className="flex flex-row pb-[203px]">
+          <div className="flex flex-row ">
             {topMovies.map((e, idx) => (
               <div
                 key={idx}
