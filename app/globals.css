@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
+  background: #09090c;
+  font-family: TT Norms Pro;
+  overflow-x: hidden;
+}
+
+.wrapper__promo-image {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 79.93%, #09090c 100%),
+    linear-gradient(90deg, #09090c 0%, rgba(0, 0, 0, 0) 51.76%),
+    url(../public/promo-background.webp);
+  background-size: 1250px 800px;
+}
+.wrapper__series-image {
+  background: linear-gradient(90deg, #09090c 0%, rgba(0, 0, 0, 0) 48.15%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 66.33%, #09090c 100%),
+    linear-gradient(180deg, #09090c 0%, rgba(0, 0, 0, 0) 10.59%),
+    url(../public/series-background.png);
+  background-size: 1400px 780px;
+}
+.wrapper__bg-styles {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.wrapper__image-rating {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+.wrapper__button {
+  color: white;
+  width: 243px;
+  height: 80px;
+  font-size: 30px;
+  justify-content: center;
+  border-radius: 16px;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.13) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+.wrapper__button:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.wrapper__blur-button {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.13) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.wrapper__blur-button:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.wrapper__grey-button {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.13) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.filled-text {
+  color: black;
+  background-color: #2aa5a0;
+  background-clip: inherit;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.outline-text {
+  color: black;
+  background: -webkit-linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
 }
